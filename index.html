@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Previewer in Vue.js (FCC)</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.4.1/github-markdown.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div id="app">
+<div class="container-fluid">
+  
+  <div class="row justify-content-md-center">
+    <div class="col-md-10">
+      <div class="card">
+         <div class="card-header">Editor</div>
+          <div class="card-block" >
+        
+<textarea name="editor" id="editor" cols="30" rows="10" 
+          v-model="editorMarkdown"
+>
+</textarea>
+        
+        </div>
+      </div>
+  </div>
+</div><!-- end row -->
+  
+  <div class="row justify-content-md-center">
+    <div class="col-md-12">
+      <div id="preview-card" class="card" >
+         <div class="card-header">Preview</div>
+
+           <div class="card-block">
+<div name="preview" id="preview" v-html="markupText"></div> 
+           </div>
+
+          </div>
+
+    </div>
+  </div><!-- end row -->
+  </div><!-- end container -->
+  
+</div><!-- end #app -->
+  <script src='https://unpkg.com/vue/dist/vue.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
